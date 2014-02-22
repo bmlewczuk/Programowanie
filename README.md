@@ -1,4 +1,296 @@
-Programowanie
-=============
+##Języki programowania
 
-Języki programowania
+a) operacje
+```c
+#include<stdio.h>
+int main(){
+	int a, b;
+	printf("podaj dwie liczby:\n");
+	scanf("%d %d", &a, &b);
+	printf("%d+%d=%d\n", a, b, a+b);
+	printf("%d-%d=%d\n", a, b, a-b);
+	printf("%d*%d=%d\n", a, b, a*b);
+	printf("%d/%d=%lf\n", a, b, (double)a/b);
+	getchar(); getchar();
+	return 0;
+}
+```
+
+b) temperatury
+```c
+#include<stdio.h>
+//pierwszy sposób
+/*int main(){
+	double fahr, celsius;
+	int lower=0, upper=300, step=20;
+	fahr=lower; 
+	while(fahr<=upper){
+		celsius=(5.0/9.0)*(fahr-32.0);
+		printf("%3.0lf %6.1lf\n", fahr, celsius);
+		fahr=fahr+step;
+	}
+	return 0;
+} */
+//drugi sposób
+/*int main(){
+	double fahr; 
+	for(fahr=0;fahr<=300;fahr+=20){
+		printf("%3.0lf %6.1lf\n", fahr, (5.0/9)*(fahr-32));
+	}
+	return 0;
+} */
+int main(){
+	double fahr=0; 
+	do {
+		printf("%3.0lf %6.1lf\n", fahr, (5.0/9)*(fahr-32));
+		fahr+=20;
+	} while(fahr<=300);
+	return 0;
+}
+```
+
+c) fibonacci
+```c
+#include<stdio.h>
+int main(){
+	int a1=1, a2=1, a3, n=2;
+	printf("1, 1, ");
+	do{
+		a3=a1+a2;
+		printf("%d, ", a3);
+		a1=a2; a2=a3;
+		n++;
+	} while(n<45);
+	return 0;
+}
+```
+
+d) trojkat
+```c
+#include<stdio.h>
+#define znak '*' //znak wypelnienia
+
+main(){
+	int lbwier, lw, lodst, j; //całkowita liczba, licznik wierszy, liczba odstępów
+	
+	printf("ile wierszy?");
+	scanf("%d", &lbwier);
+	
+	for (lw=0;lw<lbwier;lw++){
+		lodst=lbwier-lw-1;
+		for(j=0;j<lodst;j++) putchar (' ');
+		for(j=0;j<2*lw+1;j++) putchar(znak);
+		putchar('\n');
+	}
+	
+}
+```
+
+01) liczby do 23
+```c
+#include<stdio.h>
+//pierwszy sposób
+int raz(){
+	int liczba=0;
+	while(liczba<=23){
+		printf("%d ", liczba);
+		liczba+=1;
+	}
+	return 0;
+} 
+//drugi sposób
+int dwa(){
+	int liczba; 
+	for(liczba=0;liczba<=23;liczba+=1){
+		printf("%d ", liczba);
+	}
+	return 0;
+} 
+//trzeci sposób
+int trzy(){
+	int liczba=0; 
+	do {
+		printf("%d ", liczba);
+		liczba+=1;
+	} while(liczba<=23);
+	return 0;
+}
+int main(){
+	raz();
+	printf("\n");
+	dwa();
+	printf("\n");
+	trzy();
+	printf("\n");
+}
+```
+
+02) dodawanie co 0,5
+```c
+#include<stdio.h>
+int raz(){
+	double liczba; 
+	for(liczba=-3.5;liczba<=7.5;liczba+=0.5){
+		printf("%1.1lf ", liczba);
+	}
+	return 0;
+}
+int dwa(){
+	double liczba=-3.5; 
+	while(liczba<=7.5){
+		printf("%1.1lf ", liczba);
+		liczba+=0.5;
+	}
+	return 0;
+}
+int main(){
+	raz();
+	printf("\n");
+	dwa();
+	printf("\n");
+}
+```
+
+03) kwadraty i szesciany
+```c
+#include<stdio.h>
+//pierwszy sposób
+int raz(){
+	int liczba=1, n;
+	printf("Podaj gorna granice obliczen:");
+	scanf("%d", &n);
+	while(liczba<=n){
+		printf("kwadrat %d=%d, szescian %d=%d \n", liczba, liczba*liczba, liczba, liczba*liczba*liczba);
+		liczba+=1;
+	}
+	return 0;
+} 
+//drugi sposób
+int dwa(){
+	int liczba, n; 
+	printf("Podaj gorna granice obliczen:");
+	scanf("%d", &n);
+	for(liczba=1;liczba<=n;liczba+=1){
+		printf("kwadrat %d=%d, szescian %d=%d \n", liczba, liczba*liczba, liczba, liczba*liczba*liczba);
+	}
+	return 0;
+} 
+//trzeci sposób
+int trzy(){
+	int liczba=1, n; 
+	printf("Podaj gorna granice obliczen:");
+	scanf("%d", &n);
+	do {
+		printf("kwadrat %d=%d, szescian %d=%d \n", liczba, liczba*liczba, liczba, liczba*liczba*liczba);
+		liczba+=1;
+	} while(liczba<=n);
+	return 0;
+}
+int main(){
+	raz();
+	printf("\n");
+	dwa();
+	printf("\n");
+	trzy();
+	printf("\n");
+}
+```
+
+04) suma kwadratow
+```c
+#include<stdio.h>
+int raz(){
+	int liczba, wynik=0; 
+	for(liczba=3;liczba<=15;liczba+=1){
+		printf("%d ", wynik+=liczba*liczba);
+		}
+	return 0;
+}
+int dwa(){
+	int liczba=3, wynik=0; 
+	while(liczba<=15){
+		printf("%d ", wynik+=liczba*liczba);
+		liczba+=1;
+	}
+	return 0;
+}
+int main(){
+	raz();
+	printf("\n");
+	dwa();
+	printf("\n");
+}
+```
+
+05) sinus i cosinus
+```c
+#include<stdio.h>
+#include<math.h>
+int main(){
+	int stopni; 
+	for(stopni=0;stopni<=180;stopni+=30){
+		printf("Sinus %d stopni to %lf, cosinus to %lf \n", stopni, (double)sin(stopni*M_PI/180), (double)cos(stopni*M_PI/180));
+	}
+	return 0;
+} 
+```
+
+06) suma i srednia
+```c
+#include<stdio.h>
+int main(){
+	int n, i, suma=0, a;
+	printf("podaj ilosc liczb: ");
+	scanf("%d", &n);
+	for(i=1;i<=n;i++){
+		printf("podaj %d liczbe: ", i);
+		scanf("%d", &a);
+		suma+=a;
+	}
+	printf("suma liczb: %d\n", suma);
+	printf("srednia arytmetyczna liczb: %20.2lf", (double)suma/n);
+	
+}
+```
+
+07) ascii, dziesietne i hexy
+```c
+#include<stdio.h>
+main(){
+	int i;
+	for(i=97;i<=107;i++){
+		printf("%c %d %x ", i, i, i);
+	}
+	printf("\n");
+	for(i=107;i>=97;i--){
+		printf("%c %d %x ", i, i, i);
+	}
+}
+```
+
+08) wstukiwanie do x
+```c
+#include<stdio.h>
+int main(){
+	int x;
+	printf("podaj znaki: ");
+	while((x=getchar())!='x'){
+		putchar(x);
+	}
+	return 0;
+} 
+```
+
+09) tabliczka 13*13
+```c
+#include<stdio.h>
+int main(){
+	int i, n;
+	for (i=1;i<=13;i++){
+		for (n=1;n<=13;n++) {
+			printf("%d*%d=%d ", i, n, i*n );
+		}
+	printf("\n");
+	}
+}
+```
