@@ -392,3 +392,44 @@ int main(){
 	}
 }
 ```
+
+14) Liczby zmiennoprzecinkowe
+```c
+#include<stdio.h>
+int main(){
+	int n,i;
+	double a, b, c;
+	double zero=0.0;
+	double max=-1/zero;
+	double min=1/zero;
+	puts("Ile bedzie liczb zmiennoprzecinkowych?");
+	scanf("%d", &n);
+	for(i=1;i<=n;i++){
+		printf("Podaj %d liczbe: ", i);
+		scanf("%lf", &a);
+		if(a<min) min=a;
+		if(a>max) max=a;
+	}
+	printf("Najmniejsza z podanych liczba to %lf, a najwieksza to %lf.", min, max);
+}
+```
+
+15) Dni tygodnia
+```c
+#include<stdio.h>
+int main(){
+	int i;
+	printf("Podaj numer dnia tygodnia: ");
+	scanf("%d", &i);
+	switch(i){
+	case 1:	puts("Poniedzialek");	break;
+	case 2:	puts("Wtorek"); break;
+	case 3:	puts("Sroda"); break;
+	case 4:	puts("Czwartek");	break;
+	case 5:	puts("Piatek"); break;
+	case 6:	puts("Sobota"); break;
+	case 7:	puts("Niedziela"); break;
+	default: puts("Nie ma takiego dnia tygodnia."); break;
+	}
+}
+```
