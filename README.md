@@ -433,3 +433,27 @@ int main(){
 	}
 }
 ```
+
+extra) trójkąty z funkcją
+```c
+#include<stdio.h>
+#include<math.h>
+
+double pole(double a, double b, double c){
+	if (a+b>c && a+c>b && b+c>a){
+		return((sqrt((a+b+c)*(a+b-c)*(a-b+c)*(-a+b+c)))/4);
+	}
+	else return(-1);
+	
+}
+
+int main(){
+	double a, b, c;
+	puts("Podaj dlugosci bokow trojkata:");
+	scanf("%lf", &a);
+	scanf("%lf", &b);
+	scanf("%lf", &c);
+	if ((pole(a, b, c))==-1) puts("Nie ma takiego trojkata");
+	else printf("Pole wynosi: %lf", pole(a, b, c));
+}
+```
