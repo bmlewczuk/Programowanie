@@ -348,7 +348,7 @@ main(){
 	scanf("%d", &c);
 		
 	if (b*b-4*a*c>0){
-		printf ("%lf %lf", (double)(-b-sqrt(b*b-4*a*c))/2*a, (double)(-b+sqrt(b*b-4*a*c))/2*a);
+		printf ("%lf %lf", (double)(-b-sqrt(b*b-4*a*c))/(2*a), (double)(-b+sqrt(b*b-4*a*c))/(2*a));
 	}
 	else if (b*b-4*a*c==0) printf ("%lf", (double)(-b/2*a));
 		else printf("Nie ma rozwiazan");
