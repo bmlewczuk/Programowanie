@@ -257,13 +257,13 @@ int main(){
 ```c
 #include<stdio.h>
 main(){
-	int i;
-	for(i=97;i<=107;i++){
-		printf("%c %d %x ", i, i, i);
+	char i;
+	for(i='a';i<='k';i++){
+		printf("%c %d %x \n", i, i, i);
 	}
 	printf("\n");
-	for(i=107;i>=97;i--){
-		printf("%c %d %x ", i, i, i);
+	for(i='k';i>='a';i--){
+		printf("%c %d %x \n", i, i, i);
 	}
 }
 ```
@@ -295,6 +295,26 @@ int main(){
 }
 ```
 
+wesja b
+```c
+#include<stdio.h>
+int main(){
+	int i, n;
+	printf("    ");
+	for (i=1;i<=13;i++){
+		printf ("%4d", i);
+}
+	printf("\n");
+	for (i=1;i<=13;i++){
+		printf("%4d", i);
+		for (n=1;n<=13;n++) {
+			printf("%4d", i*n );
+		}
+	printf("\n");
+	}
+}
+```
+
 10) trójkąty pitagorejskie
 ```c
 #include<stdio.h>
@@ -309,6 +329,66 @@ int main(){
 			}
 		}
 	
+	}
+}
+```
+Drugie zajecia	
+
+11) pierwiastki trójmianu kwadratowego
+```c
+#include<stdio.h>
+#include<math.h>
+main(){
+	int a, b, c;
+	printf("Podaj pierwsza liczbe trojmianu: ");
+	scanf("%d", &a);
+	printf("Podaj druga liczbe trojmianu: ");
+	scanf("%d", &b);
+	printf("Podaj trzecia liczbe trojmianu: ");
+	scanf("%d", &c);
+		
+	if (b*b-4*a*c>0){
+		printf ("%lf %lf", (double)(-b-sqrt(b*b-4*a*c))/2*a, (double)(-b+sqrt(b*b-4*a*c))/2*a);
+	}
+	else if (b*b-4*a*c==0) printf ("%lf", (double)(-b/2*a));
+		else printf("Nie ma rozwiazan");
+}
+```
+
+12) liczby doskonałe
+
+```c
+#include<stdio.h>
+#include<math.h>
+int main(){
+	int i,n,porow;
+	for(i=6;i<=8200;i++){;
+		porow=0;
+		for(n=1;n<=i/2;n++){
+			if(i%n==0) porow+=n;
+		}
+		if(porow==i)printf ("%d\n", porow);
+		
+		
+	}
+}
+```
+
+13) 20 trojek pitagorejskich
+```c
+#include<stdio.h>
+int main(){
+	int a,b,c,i=1;
+		for(a=3;i<=20;a++){
+			for(b=4;b<=100;b++){
+				for (c=5;c<=100;c++){
+						if ((a*a+b*b)==(c*c) && a<b){
+				printf("%d %d %d \n", a, b, c);
+				i++;
+				}
+		 	}
+		}
+
 	}
 }
 ```
