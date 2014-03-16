@@ -457,3 +457,68 @@ int main(){
 	else printf("Pole wynosi: %lf", pole(a, b, c));
 }
 ```
+
+Zadania - funkcje
+
+1)pole (powierzchnia?) kuli
+
+```c
+#include<stdio.h>
+#include<math.h>
+
+double pole(double r){
+	return (4*M_PI*r*r);
+}
+
+int main(){
+	double r;
+	puts("Podaj promien kuli:");
+	scanf("%lf", &r);
+	printf("Promien kuli to %lf", r);
+	printf("\nPole kuli to %lf", pole(r));
+}
+```
+
+2) wartość bezwzględna
+
+```c
+#include<stdio.h>
+#include<limits.h>
+
+unsigned int wart(int n){
+	if(n<0) return(-n);
+	else return(n);
+}
+
+int main(){
+	int n;
+	puts("Podaj liczbe calkowita:");
+	scanf("%d", &n);
+	printf("Jej wartosc bezwgledna to %u", wart(n));
+}
+```
+
+3) potęgi (nie dla rekurencji)
+
+```c
+#include<stdio.h>
+
+
+int potega(int n, int a){
+	int i, wynik=a;
+	for(i=1;i<n;i++) {
+	wynik*=a;
+	}
+	return(wynik);
+}
+
+int main(){
+	int a, n;
+	puts("Podaj liczbe:");
+	scanf("%d", &a);
+	puts("Podaj potege:");
+	scanf("%d", &n);
+	printf("%d do potegi %d to %d", a, n, potega(n, a));
+}
+```
+
