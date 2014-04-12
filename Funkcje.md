@@ -83,7 +83,31 @@ int main(){
 }
 ```
 
-5) ...
+5) szereg Maclaurina
+```c
+#include<stdio.h>
+#include<math.h>
+
+double szereg(double x){
+	double eps=1e-8;
+	int i=1;
+	double wyraz=1, suma=1;
+	while (fabs(wyraz)>=eps){
+		wyraz*=x/i;
+		i++;
+		suma+=wyraz;
+	}
+	return(suma);
+}
+
+int main(){
+	double x;
+	puts("Podaj liczbe:");
+	scanf("%lf", &x);
+	printf("\n%lf", szereg(x));
+	printf("\n%lf", exp(x));
+}
+```
 
 
 6) szybkie potęgowanie
