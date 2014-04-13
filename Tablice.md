@@ -80,3 +80,25 @@ int main(){
 	printf("najwieksza z podanych liczba jest: %lf", naj);
 }
 ```
+
+5) srednia artymetyczna
+```c
+#include<stdio.h>
+#define MAX 128
+
+int main(){
+	int n, i;
+	double liczby[MAX];
+	double suma=0;
+	printf("ile liczb zmiennoprzecinkowych? ");
+	scanf("%d", &n);
+	for(i=0;i<n;i++){
+		printf("podaj %d liczbe: ",	i+1);
+		scanf("%lf", &liczby[i]);
+	}
+	for (i=0;i<n;i++){
+		suma+=liczby[i];
+	}
+	printf("srednia artymetyczna to %lf", suma/n);
+}
+```
