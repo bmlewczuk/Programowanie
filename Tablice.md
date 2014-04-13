@@ -102,3 +102,16 @@ int main(){
 	printf("srednia artymetyczna to %lf", suma/n);
 }
 ```
+
+6) tablice to podstawa programowania
+```c
+#include<stdio.h>
+
+int main(){
+	int c, i;
+	char tekst[]="Tablice to podstawa programowania";
+	for (c=sizeof(tekst)/sizeof(tekst[0])-2;c>=0;c--){	
+		printf("%c", tekst[c]);
+	}
+}
+```
