@@ -67,16 +67,16 @@ int main(){
 int main(){
 	int n, i;
 	double liczby[MAX];
-	double max=-1/0.0;
+	double naj=-1/0.0;
 	printf("ile liczb zmiennoprzecinkowych? ");
 	scanf("%d", &n);
 	for(i=0;i<n;i++){
-		printf("podaj %d liczbe: ",	i+1);
+		printf("podaj %d liczbe: ", i+1);
 		scanf("%lf", &liczby[i]);
 	}
 	for (i=0;i<n;i++){
-		if(liczby[i]>max) max=liczby[i];
+		if(liczby[i]>naj) naj=liczby[i];
 	}
-	printf("najwieksza z podanych liczba jest: %lf", max);
+	printf("najwieksza z podanych liczba jest: %lf", naj);
 }
 ```
