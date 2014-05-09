@@ -1,3 +1,4 @@
+```c
 #include<stdio.h>
 #include<string.h>
 #define MAX 128
@@ -20,3 +21,4 @@ main(){
 	}
 	printf("zdobyles %d na 30 punktow", wynik);
 }
+```
