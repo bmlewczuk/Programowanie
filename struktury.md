@@ -144,3 +144,15 @@ int odczyt(struct student Studenci[]){
 
 iloscStudentow=odczyt(Studenci);
 ```
+
+**6) srednia arytematyczna**
+```c
+double srednia(struct student Studenci[], int iloscStudentow){
+	int i, suma=0;
+	for (i=0;i<iloscStudentow;i++)
+	suma+=Studenci[i].ocena;
+	return suma/(double)iloscStudentow;
+}
+
+printf("Srednia arytemetyczna ocen to: %lf", srednia(Studenci, iloscStudentow));
+```
