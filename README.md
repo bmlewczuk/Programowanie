@@ -6,7 +6,7 @@
 
 [Biblioteka komend](http://www.cplusplus.com/doc/tutorial/)
 
-a) operacje
+**a) operacje**
 ```c
 #include<stdio.h>
 int main(){
@@ -22,7 +22,7 @@ int main(){
 }
 ```
 
-b) temperatury
+**b) temperatury**
 ```c
 #include<stdio.h>
 //pierwszy sposób
@@ -55,7 +55,7 @@ int main(){
 }
 ```
 
-c) fibonacci
+**c) fibonacci**
 ```c
 #include<stdio.h>
 int main(){
@@ -71,7 +71,7 @@ int main(){
 }
 ```
 
-d) trojkat
+**d) trojkat**
 ```c
 #include<stdio.h>
 #define znak '*' //znak wypelnienia
@@ -92,7 +92,7 @@ main(){
 }
 ```
 
-01) liczby do 23
+**01) liczby do 23**
 ```c
 #include<stdio.h>
 //pierwszy sposób
@@ -131,7 +131,7 @@ int main(){
 }
 ```
 
-02) dodawanie co 0,5
+**02) dodawanie co 0,5**
 ```c
 #include<stdio.h>
 int raz(){
@@ -157,7 +157,7 @@ int main(){
 }
 ```
 
-03) kwadraty i szesciany
+**03) kwadraty i szesciany**
 ```c
 #include<stdio.h>
 //pierwszy sposób
@@ -202,7 +202,7 @@ int main(){
 }
 ```
 
-04) suma kwadratow
+**04) suma kwadratow**
 ```c
 #include<stdio.h>
 int raz(){
@@ -228,7 +228,7 @@ int main(){
 }
 ```
 
-05) sinus i cosinus
+**05) sinus i cosinus**
 ```c
 #include<stdio.h>
 #include<math.h>
@@ -241,7 +241,7 @@ int main(){
 } 
 ```
 
-06) suma i srednia
+**06) suma i srednia**
 ```c
 #include<stdio.h>
 int main(){
@@ -259,7 +259,7 @@ int main(){
 }
 ```
 
-07) ascii, dziesietne i hexy
+**07) ascii, dziesietne i hexy**
 ```c
 #include<stdio.h>
 main(){
@@ -274,7 +274,7 @@ main(){
 }
 ```
 
-08) wstukiwanie do x
+**08) wstukiwanie do x**
 ```c
 #include<stdio.h>
 int main(){
@@ -287,7 +287,7 @@ int main(){
 } 
 ```
 
-09) tabliczka 13*13
+**09) tabliczka 13*13**
 ```c
 #include<stdio.h>
 int main(){
@@ -301,7 +301,7 @@ int main(){
 }
 ```
 
-wesja b
+**wesja b**
 ```c
 #include<stdio.h>
 int main(){
@@ -321,7 +321,7 @@ int main(){
 }
 ```
 
-10) trójkąty pitagorejskie
+**10) trójkąty pitagorejskie**
 ```c
 #include<stdio.h>
 #include<math.h>
@@ -340,7 +340,7 @@ int main(){
 ```
 Drugie zajecia	
 
-11) pierwiastki trójmianu kwadratowego
+**11) pierwiastki trójmianu kwadratowego**
 ```c
 #include<stdio.h>
 #include<math.h>
@@ -361,7 +361,7 @@ main(){
 }
 ```
 
-12) liczby doskonałe
+**12) liczby doskonałe**
 
 ```c
 #include<stdio.h>
@@ -380,7 +380,7 @@ int main(){
 }
 ```
 
-13) 20 trojek pitagorejskich
+**13) 20 trojek pitagorejskich**
 ```c
 #include<stdio.h>
 int main(){
@@ -399,7 +399,7 @@ int main(){
 }
 ```
 
-14) Liczby zmiennoprzecinkowe
+**14) Liczby zmiennoprzecinkowe**
 ```c
 #include<stdio.h>
 int main(){
@@ -420,7 +420,7 @@ int main(){
 }
 ```
 
-15) Dni tygodnia
+**15) Dni tygodnia**
 ```c
 #include<stdio.h>
 int main(){
@@ -440,7 +440,7 @@ int main(){
 }
 ```
 
-extra) trójkąty z funkcją
+**extra) trójkąty z funkcją**
 ```c
 #include<stdio.h>
 #include<math.h>
@@ -464,9 +464,9 @@ int main(){
 }
 ```
 
-Zadania - funkcje
+**Zadania - funkcje**
 
-1)pole (powierzchnia?) kuli
+**1)pole (powierzchnia?) kuli**
 
 ```c
 #include<stdio.h>
@@ -485,7 +485,7 @@ int main(){
 }
 ```
 
-2) wartość bezwzględna
+**2) wartość bezwzględna**
 
 ```c
 #include<stdio.h>
@@ -504,7 +504,7 @@ int main(){
 }
 ```
 
-3) potęgi (nie dla rekurencji)
+**3) potęgi (nie dla rekurencji)**
 
 ```c
 #include<stdio.h>
@@ -527,4 +527,4 @@ int main(){
 	printf("%d do potegi %d to %d", a, n, potega(n, a));
 }
 ```
-
+**[Funkcje -c.d.](https://github.com/bmlewczuk/Programowanie/blob/master/Funkcje.md)**
