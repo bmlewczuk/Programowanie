@@ -119,3 +119,28 @@ int dodaj(struct student Studenci[], int iloscStudentow){
 
 	iloscStudentow=dodaj(Studenci, iloscStudentow);
 ```
+
+**5) wczytaj z pliku**
+
+```c
+int odczyt(struct student Studenci[]){
+	FILE *plik;
+	const char * const nazwaPliku="studenci.txt";
+	int i=0;
+	    if((plik=fopen(nazwaPliku,"r"))==NULL){
+        fprintf(stderr,"Nie moge otworzyc pliku %s\n", nazwaPliku);
+        exit(2);
+		}
+
+	fopen(nazwaPliku, "r");
+	while (fscanf(plik, "%s %s %d", Studenci[i].imie, Studenci[i].nazwisko, &Studenci[i].ocena)==3) i++;	
+	
+	    if(fclose(plik)!=0){
+        fprintf(stderr, "Nie moge zamknac pliku %s\n", nazwaPliku);
+        exit(3);
+    }
+        return i;
+}
+
+iloscStudentow=odczyt(Studenci);
+```
