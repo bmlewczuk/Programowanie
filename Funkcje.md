@@ -1,6 +1,6 @@
 ##Funkcje
 
-1) kula
+**1) kula**
 ```c
 #include<stdio.h>
 #include<math.h>
@@ -18,7 +18,7 @@ int main(){
 }
 ```
 
-2) wartość bezwzględna
+**2) wartość bezwzględna**
 ```c
 ##include<stdio.h>
 #include<limits.h>
@@ -38,7 +38,7 @@ int main(){
 }
 ```
 
-3) potęgowanie proste
+**3) potęgowanie proste**
 ```c
 #include<stdio.h>
 
@@ -62,7 +62,7 @@ int main(){
 }
 ```
 
-4) pierwiastki
+**4) pierwiastki**
 ```c
 #include<stdio.h>
 #include<math.h>
@@ -83,7 +83,7 @@ int main(){
 }
 ```
 
-5) szereg Maclaurina
+**5) szereg Maclaurina**
 ```c
 #include<stdio.h>
 #include<math.h>
@@ -110,7 +110,7 @@ int main(){
 ```
 
 
-6) szybkie potęgowanie
+**6) szybkie potęgowanie**
 ```c
 #include<stdio.h>
 
@@ -134,7 +134,7 @@ int main(){
 }
 ```
 
-7) szybkie potęgowanie z potęgami ujemnymi
+**7) szybkie potęgowanie z potęgami ujemnymi**
 ```c
 #include<stdio.h>
 
