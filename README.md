@@ -440,6 +440,8 @@ int main(){
 }
 ```
 
+[komendy funkcji](http://www.cplusplus.com/doc/tutorial/functions/)
+
 **extra) trójkąty z funkcją**
 ```c
 #include<stdio.h>
