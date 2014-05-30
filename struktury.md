@@ -56,3 +56,25 @@ int wyswietl(struct student Studenci[], int iloscStudentow){
 
 wyswietl(Studenci, iloscStudentow);
 ```
+
+
+**3) funkcja zapis**
+```c
+int zapisz(struct student Studenci[], int iloscStudentow){
+	FILE *plik;
+	const char * const nazwaPliku="studenci.txt";
+	int k;
+	if((plik=fopen(nazwaPliku,"w"))==NULL){
+		fprintf(stderr,"Nie moge otworzyc pliku %s\n", nazwaPliku);
+		exit(2);
+	}
+	for(k=0; k<iloscStudentow; k++)	fprintf(plik, "%s %s %d\n", Studenci[k].imie, Studenci[k].nazwisko, Studenci[k].ocena);
+	
+		if(fclose(plik)!=0){
+		fprintf(stderr, "Nie moge zamknac pliku %s\n", nazwaPliku);
+		exit(3);
+	}
+}
+
+zapisz(Studenci,iloscStudentow);
+```
