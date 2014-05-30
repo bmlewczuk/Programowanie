@@ -1,5 +1,9 @@
 ##Języki programowania
 
+[Programowanie w C](http://en.wikipedia.org/wiki/C_(programming_language))
+
+[Biblioteka komend](http://www.cplusplus.com/doc/tutorial/)
+
 a) operacje
 ```c
 #include<stdio.h>
