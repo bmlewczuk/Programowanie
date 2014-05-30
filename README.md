@@ -1,5 +1,7 @@
 ##Języki programowania
 
+![C](http://upload.wikimedia.org/wikipedia/commons/thumb/3/35/The_C_Programming_Language_logo.svg/226px-The_C_Programming_Language_logo.svg.png)
+
 [Programowanie w C](http://en.wikipedia.org/wiki/C_(programming_language))
 
 [Biblioteka komend](http://www.cplusplus.com/doc/tutorial/)
