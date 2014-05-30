@@ -160,3 +160,5 @@ int main(){
 	printf ("Wynik to %lf", szpot(a, n));
 }
 ```
+
+**[Tablice](https://github.com/bmlewczuk/Programowanie/blob/master/Tablice.md)**
