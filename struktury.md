@@ -78,3 +78,44 @@ int zapisz(struct student Studenci[], int iloscStudentow){
 
 zapisz(Studenci,iloscStudentow);
 ```
+
+**4) funkcja dodaj**
+```c
+int dodaj(struct student Studenci[], int iloscStudentow){
+	char odp, string[16];
+	int o;
+	printf("Czy chcesz dodac kolejnego studenta? (wcisnij t jezeli tak)");
+	odp=getchar();
+	getchar();
+	for (;odp=='t';){
+		printf("\npodaj imie: ");
+		scanf("%s", &string);
+		strncpy(Studenci[iloscStudentow].imie, string, 12);
+		Studenci[iloscStudentow].imie[11]='\0';
+		printf("\npodaj nazwisko: ");
+		scanf("%s", &string);
+		strncpy(Studenci[iloscStudentow].nazwisko, string, 16);
+		Studenci[iloscStudentow].nazwisko[15]='\0';
+		printf("\npodaj ocene: ");
+		scanf("%d", &o);
+		switch (o){
+			case 2: Studenci[iloscStudentow].ocena=ndst;
+			break;
+			case 3: Studenci[iloscStudentow].ocena=dst;
+			break;
+			case 4: Studenci[iloscStudentow].ocena=db;
+			break;
+			case 5: Studenci[iloscStudentow].ocena=bdb;
+			break;
+		}
+		iloscStudentow++;
+		printf("Czy chcesz dodac kolejnego studenta? (wcisnij t jezeli tak)");
+		getchar();
+		odp=getchar();
+			
+	}
+	return iloscStudentow;
+}
+
+	iloscStudentow=dodaj(Studenci, iloscStudentow);
+```
