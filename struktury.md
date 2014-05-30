@@ -46,3 +46,13 @@ int main(){
 	return 0;
 }
 ```
+
+**2) wyswietlanie**
+```c
+int wyswietl(struct student Studenci[], int iloscStudentow){
+	int k;
+	for(k=0; k<iloscStudentow; k++)	printf("%s %s %d\n", Studenci[k].imie, Studenci[k].nazwisko, Studenci[k].ocena);
+}
+
+wyswietl(Studenci, iloscStudentow);
+```
