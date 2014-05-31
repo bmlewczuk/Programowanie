@@ -19,11 +19,22 @@ int wypelnij(int dane[], int rozmiar){
     }
 }
 
+int porow(const void *a, const void*b){
+	int aa=*((int*)a);
+	int bb=*((int*)b);
+	if(aa<bb) return -1;
+	if(aa>bb) return 1;	
+}
+
 
 int main(){
     int dane[MAX], rozmiar;
     rozmiar=MAX;
     wypelnij(dane, rozmiar);
+    wyswietl(dane, rozmiar);
+    
+    qsort(dane, rozmiar, sizeof(int), porow);
+    puts("");
     wyswietl(dane, rozmiar);
 }
 
