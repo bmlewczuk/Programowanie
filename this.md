@@ -24,6 +24,14 @@ int czasownik(){
 			else strcpy(porow, trzy[k]);
 		printf("Podaj %d forme czasownika '%s':\n", f, polski[k]);
 		gets(haslo);
+/*   	for(i=0; i<strlen(haslo); i++){
+        	if (haslo[i]==' '){
+        		for(x=i; x<strlen(haslo); x++){
+            		haslo[x]=haslo[x+1];
+            	}
+        	}
+
+    	}*/
 		if (stricmp(haslo, porow) == 0){
 			printf("Bardzo dobrze!\n\n");
 			suma+=1;	
